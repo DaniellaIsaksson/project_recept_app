@@ -1,7 +1,12 @@
-import "./App.css";
+import "./styling/App.css";
+import Weekly from "./components/weekly";
 
 function App() {
-  return;
+  return (
+    <>
+      <Weekly />
+    </>
+  );
 }
 
 export default App;
