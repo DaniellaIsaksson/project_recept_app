@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
+import "../styling/home.css";
 
 function Weekly() {
   const [weekly, setWeekly] = useState([]);
 
   useEffect(() => {
     getWeekly();
+
+    const weeklyUpdate = setInterval(getWeekly, 5 * 24 * 60 * 1000);
+
+    return () => clearInterval(weeklyUpdate);
   }, []);
 
   const getWeekly = async () => {
@@ -32,12 +37,12 @@ function Weekly() {
 
   return (
     <>
-      <h4>Recommended Recipes</h4>
-      <div>
+      <h4 className="card-h4">Recommended Recipes</h4>
+      <div className="card-box">
         {weekly.map((recipe) => {
           return (
-            <div key={recipe.id}>
-              <img src={recipe.image} />
+            <div key={recipe.id} className="card">
+              <img src={recipe.image} className="card-img-top" />
               <h5>{recipe.title}</h5>
             </div>
           );

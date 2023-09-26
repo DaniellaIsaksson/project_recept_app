@@ -1,0 +1,49 @@
+/*Design for the recipes cards*/
+.card-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 1600px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 22rem;
+  height: 22rem;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.card h5 {
+  color: #059669;
+  font-size: 17px;
+}
+
+.card h5:hover {
+  color: #0569668d;
+  cursor: pointer;
+}
+
+.card-img-top {
+  border-radius: 5%;
+  height: 14rem;
+  width: 19rem;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  transition: transform 0.2s;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card-h4 {
+  text-align: center;
+  border-bottom: solid 1px #accdac76;
+  padding-bottom: 12px;
+  margin-bottom: 80px;
+}
