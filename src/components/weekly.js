@@ -8,7 +8,6 @@ function Weekly() {
     getWeekly();
 
     const weeklyUpdate = setInterval(getWeekly, 5 * 24 * 60 * 1000);
-
     return () => clearInterval(weeklyUpdate);
   }, []);
 
