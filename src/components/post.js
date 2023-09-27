@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styling/home.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Post() {
   const [post, setPost] = useState([]);
@@ -32,6 +33,25 @@ function Post() {
     }
   };
 
+  const convertRating = (averageRating) => {
+    const totalStars = 5;
+    const rating = (averageRating * 5).toFixed(1);
+    console.log({ rating });
+    const starIcons = [];
+
+    for (let i = 1; i <= totalStars; i++) {
+      if (i <= rating) {
+        starIcons.push(<i key={i} className="bi bi-star-fill"></i>);
+      } else if (i - 0.5 <= rating) {
+        starIcons.push(<i key={i} className="bi bi-star-half"></i>);
+      } else {
+        starIcons.push(<i key={i} className="bi bi-star"></i>);
+      }
+    }
+
+    return starIcons;
+  };
+
   return (
     <div>
       <h4 className="post-header">Recommended Wine</h4>
@@ -46,7 +66,10 @@ function Post() {
             <h4>{recommended.title}</h4>
             <p>{recommended.description}</p>
             <a href={recommended.link}>Learn More</a>
-            <p>({recommended.ratingCount})</p>
+            <div className="star-rating">
+              {convertRating(recommended.averageRating)}
+              <p>({recommended.ratingCount})</p>
+            </div>
           </div>
         </div>
       ))}

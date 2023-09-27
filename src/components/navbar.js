@@ -2,29 +2,29 @@ import "../styling/App.css";
 
 function Navbar() {
   return (
-    <ul class="nav nav-underline justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="#">
+    <ul className="nav nav-underline justify-content-center">
+      <li className="nav-item">
+        <a className="nav-link" aria-current="page" href="#">
           Home
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li className="nav-item">
+        <a className="nav-link" href="#">
           Test
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li className="nav-item">
+        <a className="nav-link" href="#">
           Test
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li className="nav-item">
+        <a className="nav-link" href="#">
           Test
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+      <li className="nav-item">
+        <a className="nav-link" href="#">
           Test
         </a>
       </li>

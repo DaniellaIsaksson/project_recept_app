@@ -85,3 +85,23 @@
 .wine-content h4 {
   margin-bottom: 30px;
 }
+
+/*Design Rating Score*/
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.bi-star-fill {
+  color: gold;
+}
+
+.bi-star-half {
+  color: gold;
+}
+
+.bi-star {
+  color: rgba(128, 128, 128, 0.372);
+}

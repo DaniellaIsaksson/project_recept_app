@@ -22,7 +22,7 @@ function Weekly() {
     } else {
       try {
         const getApi = await fetch(
-          "https://api.spoonacular.com/recipes/random?apiKey=8924228ec4664510aa77b93008bd310d&number=8&tags=main course"
+          "https://api.spoonacular.com/recipes/random?apiKey=ca828aec25dc435d988a20d538bd09f7&number=8&tags=main course"
         );
         const data = await getApi.json();
 
@@ -38,20 +38,24 @@ function Weekly() {
     <>
       <h4 className="card-h4">Recommended Recipes</h4>
       <div className="card-box">
-        {weekly.map((recipe) => {
-          return (
-            <div key={recipe.id} className="card">
-              <div>
-                <img
-                  src={recipe.image}
-                  alt={recipe.title}
-                  className="card-img-top"
-                />
-                <h5>{recipe.title}</h5>
+        {weekly.length > 0 ? (
+          weekly.map((recipe) => {
+            return (
+              <div key={recipe.id} className="card">
+                <div>
+                  <img
+                    src={recipe.image}
+                    alt={recipe.title}
+                    className="card-img-top"
+                  />
+                  <h5>{recipe.title}</h5>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })
+        ) : (
+          <p>loading..</p>
+        )}
       </div>
     </>
   );
