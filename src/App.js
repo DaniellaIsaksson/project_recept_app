@@ -1,12 +1,12 @@
 import "./styling/App.css";
-import Weekly from "./components/weekly";
-import Post from "./components/post";
+import { Home } from "./pages/home";
+import Header from "./components/header";
 
 function App() {
   return (
     <>
-      <Weekly />
-      <Post />
+      <Header />
+      <Home />
     </>
   );
 }
