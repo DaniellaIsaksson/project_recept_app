@@ -34,11 +34,15 @@ function Post() {
 
   return (
     <div>
-      <h4>Recommended Wine</h4>
+      <h4 className="post-header">Recommended Wine</h4>
       {post.map((recommended) => (
-        <div key={recommended.id}>
-          <img src={recommended.imageUrl} alt={recommended.title} />
-          <div>
+        <div key={recommended.id} className="recommended-wine">
+          <img
+            src={recommended.imageUrl}
+            alt={recommended.title}
+            style={{ width: "100px" }}
+          />
+          <div className="wine-content">
             <h4>{recommended.title}</h4>
             <p>{recommended.description}</p>
             <a href={recommended.link}>Learn More</a>

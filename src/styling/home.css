@@ -46,4 +46,38 @@
   border-bottom: solid 1px #accdac76;
   padding-bottom: 12px;
   margin-bottom: 80px;
+  font-size: 22px;
+}
+
+/*Design for the post content*/
+.post-header {
+  text-align: center;
+  border-bottom: solid 1px #accdac76;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  font-size: 33px;
+  margin-top: 50px;
+  font-family: "Alex Brush", cursive;
+}
+
+.recommended-wine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.wine-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 600px;
+}
+
+.wine-content a {
+  text-decoration: none;
+  color: #059669;
 }

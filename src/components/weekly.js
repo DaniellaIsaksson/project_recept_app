@@ -41,8 +41,14 @@ function Weekly() {
         {weekly.map((recipe) => {
           return (
             <div key={recipe.id} className="card">
-              <img src={recipe.image} className="card-img-top" />
-              <h5>{recipe.title}</h5>
+              <div>
+                <img
+                  src={recipe.image}
+                  alt={recipe.title}
+                  className="card-img-top"
+                />
+                <h5>{recipe.title}</h5>
+              </div>
             </div>
           );
         })}
