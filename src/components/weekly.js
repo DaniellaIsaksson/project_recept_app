@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../styling/home.css";
+import "../styling/card&post.css";
 
 function Weekly() {
   const [weekly, setWeekly] = useState([]);

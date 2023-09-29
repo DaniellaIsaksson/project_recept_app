@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../styling/home.css";
+import "../styling/card&post.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Post() {

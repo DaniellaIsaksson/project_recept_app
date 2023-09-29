@@ -33,3 +33,9 @@
 .icon-style:hover {
   transform: scale(1.1);
 }
+
+/*Dropdown menu*/
+ul {
+  display: flex;
+  flex-direction: column;
+}
