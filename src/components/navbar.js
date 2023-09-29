@@ -16,11 +16,11 @@ function Navbar() {
 
   return (
     <div className="Navbar">
-      <NavLink className="nav-item">
+      <NavLink to={"/"} className="nav-item">
         <AiFillHome className="icon-style" />
         <h4>Home</h4>
       </NavLink>
-      <NavLink
+      <div
         className="nav-item"
         to="/world-recipe"
         onMouseEnter={() => setDropDown(true)}
@@ -31,28 +31,34 @@ function Navbar() {
         {dropDown && (
           <div className="dropdown">
             <ul>
-              <NavLink to={"/worldRecipe/Italian"}>Italian </NavLink>
-              <NavLink to={"/worldRecipe/Greek"}>Greek </NavLink>
-              <NavLink to={"/worldRecipe/Mexican"}>Mexican </NavLink>
-              <NavLink to={"/worldRecipe/Asian"}>Asian </NavLink>
-              <NavLink to={"/worldRecipe/Indian"}>Indian </NavLink>
+              <NavLink to={"/worldRecipe/Italian"} className="li-item">
+                Italian
+              </NavLink>
+              <NavLink to={"/worldRecipe/Greek"} className="li-item">
+                Greek
+              </NavLink>
+              <NavLink to={"/worldRecipe/Mexican"} className="li-item">
+                Mexican
+              </NavLink>
+              <NavLink to={"/worldRecipe/Asian"} className="li-item">
+                Asian
+              </NavLink>
+              <NavLink to={"/worldRecipe/Indian"} className="li-item">
+                Indian
+              </NavLink>
             </ul>
           </div>
         )}
-      </NavLink>
-      <NavLink className="nav-item">
-        <FaFish className="icon-style" />
-        <h4>Fish and Seafood</h4>
-      </NavLink>
-      <NavLink className="nav-item">
+      </div>
+      <NavLink to={"/Recipe/Chicken"} className="nav-item">
         <GiChickenOven className="icon-style" />
         <h4>Chicken</h4>
       </NavLink>
-      <NavLink className="nav-item">
+      <NavLink to={"/Recipe/Meat"} className="nav-item">
         <GiMeat className="icon-style" />
         <h4>Meat</h4>
       </NavLink>
-      <NavLink className="nav-item">
+      <NavLink to={"/Recipe/Dessert"} className="nav-item">
         <LuDessert className="icon-style" />
         <h4>Dessert</h4>
       </NavLink>

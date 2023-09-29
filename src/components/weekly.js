@@ -22,7 +22,7 @@ function Weekly() {
     } else {
       try {
         const getApi = await fetch(
-          "https://api.spoonacular.com/recipes/random?apiKey=ca828aec25dc435d988a20d538bd09f7&number=8&tags=main course"
+          "https://api.spoonacular.com/recipes/random?apiKey=5117994a92844cb5a53ef8994617a6ca&number=8&tags=main course"
         );
         const data = await getApi.json();
 

@@ -19,7 +19,7 @@ function WorldRecipe() {
       }
     } else {
       const getApi = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=ca828aec25dc435d988a20d538bd09f7&cuisine=${name}&number=12`
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=5117994a92844cb5a53ef8994617a6ca&cuisine=${name}&number=32`
       );
       const recipes = await getApi.json();
 
@@ -31,6 +31,12 @@ function WorldRecipe() {
   useEffect(() => {
     getCuisine(params.type);
     console.log(params.type);
+
+    const CuisineUpdate = setInterval(() => {
+      getCuisine(params.type);
+    }, 3 * 24 * 60 * 60 * 1000);
+
+    return () => clearInterval(CuisineUpdate);
   }, [params.type]);
 
   return (

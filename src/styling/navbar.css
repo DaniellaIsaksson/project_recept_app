@@ -11,6 +11,8 @@
   align-items: center;
   gap: 10px;
   font-size: 30px;
+  text-decoration: none;
+  color: black;
 }
 
 .nav-item h4:hover {
@@ -38,4 +40,16 @@
 ul {
   display: flex;
   flex-direction: column;
+}
+
+.li-item {
+  margin-right: 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.li-item:hover {
+  border-bottom: solid #accdac 3px;
+  color: rgba(0, 0, 0, 0.383);
 }

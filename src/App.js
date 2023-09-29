@@ -3,6 +3,7 @@ import { Home } from "./pages/home";
 import Header from "./components/header";
 import Navbar from "./components/navbar";
 import WorldRecipe from "./pages/WorldRecipe";
+import Recipe from "./pages/Recipes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
