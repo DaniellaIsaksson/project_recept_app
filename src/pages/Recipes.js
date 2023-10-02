@@ -2,7 +2,7 @@ import "../styling/card&post.css";
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function Recipe() {
+function Recipes() {
   const [recipes, setRecipes] = useState([]);
   let params = useParams();
 
@@ -41,17 +41,19 @@ function Recipe() {
 
   return (
     <>
-      <h4 className="card-h4">{params.type}</h4>
+      <h4 className="card-h4">{params.type} Recipes</h4>
       <div className="card-box">
         {recipes.map((recipes) => {
           return (
             <div key={recipes.id} className="card">
-              <img
-                src={recipes.image}
-                alt={recipes.title}
-                className="card-img-top"
-              />
-              <h5>{recipes.title}</h5>
+              <Link to={"/recipeview/" + recipes.id}>
+                <img
+                  src={recipes.image}
+                  alt={recipes.title}
+                  className="card-img-top"
+                />
+                <h5>{recipes.title}</h5>
+              </Link>
             </div>
           );
         })}
@@ -60,4 +62,4 @@ function Recipe() {
   );
 }
 
-export default Recipe;
+export default Recipes;

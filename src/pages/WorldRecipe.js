@@ -46,12 +46,14 @@ function WorldRecipe() {
         {cuisine.map((recipe) => {
           return (
             <div key={recipe.id} className="card">
-              <img
-                src={recipe.image}
-                alt={recipe.title}
-                className="card-img-top"
-              />
-              <h5>{recipe.title}</h5>
+              <Link to={"/recipeview/" + recipe.id}>
+                <img
+                  src={recipe.image}
+                  alt={recipe.title}
+                  className="card-img-top"
+                />
+                <h5>{recipe.title}</h5>
+              </Link>
             </div>
           );
         })}

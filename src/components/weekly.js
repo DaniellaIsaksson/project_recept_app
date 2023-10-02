@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styling/card&post.css";
+import { Link } from "react-router-dom";
 
 function Weekly() {
   const [weekly, setWeekly] = useState([]);
@@ -42,14 +43,14 @@ function Weekly() {
           weekly.map((recipe) => {
             return (
               <div key={recipe.id} className="card">
-                <div>
+                <Link to={"/recipeview/" + recipe.id}>
                   <img
                     src={recipe.image}
                     alt={recipe.title}
                     className="card-img-top"
                   />
                   <h5>{recipe.title}</h5>
-                </div>
+                </Link>
               </div>
             );
           })
