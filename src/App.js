@@ -3,7 +3,7 @@ import { Home } from "./pages/home";
 import Header from "./components/header";
 import Navbar from "./components/navbar";
 import WorldRecipe from "./pages/WorldRecipe";
-import Recipe from "./pages/Recipes";
+import Recipes from "./pages/Recipes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/worldRecipe/:type" element={<WorldRecipe />} />
+          <Route path="/Recipes/:type" element={<Recipes />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -50,15 +50,15 @@ function Navbar() {
           </div>
         )}
       </div>
-      <NavLink to={"/Recipe/Chicken"} className="nav-item">
+      <NavLink to={"/Recipes/Chicken"} className="nav-item">
         <GiChickenOven className="icon-style" />
         <h4>Chicken</h4>
       </NavLink>
-      <NavLink to={"/Recipe/Meat"} className="nav-item">
+      <NavLink to={"/Recipes/Meat"} className="nav-item">
         <GiMeat className="icon-style" />
         <h4>Meat</h4>
       </NavLink>
-      <NavLink to={"/Recipe/Dessert"} className="nav-item">
+      <NavLink to={"/Recipes/Dessert"} className="nav-item">
         <LuDessert className="icon-style" />
         <h4>Dessert</h4>
       </NavLink>
