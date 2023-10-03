@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  width: 1500px;
+  gap: 100px;
+  margin-top: 150px;
+}
+
+.wrapper img {
+  width: 400px;
+  height: 300px;
+  border-radius: 5%;
+}
+
+.recipe-title h2 {
+  color: #059669;
+  margin-bottom: 50px;
+}
+
+.info {
+  width: 45rem;
+  margin-bottom: 30px;
+}
+
+.info button {
+  width: 7rem;
+  height: 2.5rem;
+  border: 2px solid #accdac;
+  border-radius: 30px;
+  background-color: #accdac;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.info button:hover {
+  border-color: #059669;
+  background-color: #059669;
+}
+
+.info button:focus {
+  border-color: #059669;
+  background-color: #059669;
+}
+
+.info button:target {
+  border-color: #059669;
+  background-color: #059669;
+}
+
+.info li {
+  list-style: circle;
+  margin-bottom: 10px;
+  width: 500px;
+}

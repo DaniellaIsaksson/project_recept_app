@@ -7,8 +7,8 @@ function RecipeView() {
   const [details, setDetails] = useState({});
   const [active, setActive] = useState("instructions");
 
-  const fetchDetails = async (id) => {
-    const key = `details_${id}`;
+  const fetchDetails = async () => {
+    const key = `details_${params.id}`;
 
     const item = localStorage.getItem(key);
 
@@ -38,37 +38,41 @@ function RecipeView() {
   return (
     <>
       <div className="wrapper">
-        <h4>{details.title}</h4>
         <img src={details.image} alt={details.title} />
-      </div>
-      <div className="info">
-        <button
-          className={active === "instructions" ? "active" : ""}
-          onClick={() => setActive("instructions")}
-        >
-          Instructions
-        </button>
-        <button
-          className={active === "ingredients" ? "active" : ""}
-          onClick={() => setActive("ingredients")}
-        >
-          Ingridients
-        </button>
-        {active === "instructions" && (
-          <div>
-            <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
-            <span
-              dangerouslySetInnerHTML={{ __html: details.instructions }}
-            ></span>
+        <div className="info">
+          <div className="recipe-title">
+            <h2>{details.title}</h2>
           </div>
-        )}
-        {active == "ingredients" && (
-          <ul>
-            {details.extendedIngredients.map((ingredient) => (
-              <li key={ingredient.id}>{ingredient.original}</li>
-            ))}
-          </ul>
-        )}
+          <div className="button-div">
+            <button
+              className={active === "instructions" ? "active" : ""}
+              onClick={() => setActive("instructions")}
+            >
+              Instructions
+            </button>
+            <button
+              className={active === "ingredients" ? "active" : ""}
+              onClick={() => setActive("ingredients")}
+            >
+              Ingredients
+            </button>
+          </div>
+          {active === "instructions" && (
+            <div>
+              <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
+              <span
+                dangerouslySetInnerHTML={{ __html: details.instructions }}
+              ></span>
+            </div>
+          )}
+          {active == "ingredients" && (
+            <ul>
+              {details.extendedIngredients.map((ingredient) => (
+                <li key={ingredient.id}>{ingredient.original}</li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
     </>
   );

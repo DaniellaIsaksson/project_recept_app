@@ -51,6 +51,10 @@
   font-size: 22px;
 }
 
+.link-item {
+  text-decoration: none;
+}
+
 /*Design for the post content*/
 .post-header {
   text-align: center;

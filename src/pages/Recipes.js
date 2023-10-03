@@ -46,7 +46,7 @@ function Recipes() {
         {recipes.map((recipes) => {
           return (
             <div key={recipes.id} className="card">
-              <Link to={"/recipeview/" + recipes.id}>
+              <Link to={"/recipeview/" + recipes.id} className="link-item">
                 <img
                   src={recipes.image}
                   alt={recipes.title}
