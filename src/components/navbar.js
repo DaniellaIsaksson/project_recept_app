@@ -1,5 +1,4 @@
 import { GiChickenOven, GiMeat } from "react-icons/gi";
-import { FaFish } from "react-icons/fa";
 import { LuDessert } from "react-icons/lu";
 import { AiFillHome } from "react-icons/ai";
 import { TbToolsKitchen2 } from "react-icons/tb";
@@ -8,8 +7,10 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 function Navbar() {
+  // State to control the dropdown menu
   const [dropDown, setDropDown] = useState(false);
 
+  // Function to toggle the dropdown menu
   const toggle = () => {
     setDropDown(!dropDown);
   };
@@ -20,6 +21,7 @@ function Navbar() {
         <AiFillHome className="icon-style" />
         <h4>Home</h4>
       </NavLink>
+      {/* World Recipe Link with Dropdown */}
       <div
         className="nav-item"
         to="/world-recipe"
@@ -31,6 +33,7 @@ function Navbar() {
         {dropDown && (
           <div className="dropdown">
             <ul>
+              {/* Links to different cuisine categories */}
               <NavLink to={"/worldRecipe/Italian"} className="li-item">
                 Italian
               </NavLink>
