@@ -5,7 +5,7 @@ import "../styling/recipeview.css";
 function RecipeView() {
   // get the dynamic `id` parameter from the route
   let params = useParams();
-  // Initialize state to store recipe details and the active tab
+  // Initialize state to store recipe details and the active abt
   const [details, setDetails] = useState({});
   const [active, setActive] = useState("instructions");
 
